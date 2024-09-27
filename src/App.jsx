@@ -12,11 +12,10 @@ const App = () => {
     setIsLoggedIn(true); // Update state to show Home component
   };
 
-  // Verify that the client ID is set correctly
-  console.log('Google Client ID:', import.meta.env.VITE_GOOGLE_CLIENT_ID);
+ 
 
   return (
-    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+    <GoogleOAuthProvider clientId="567904536363-0orl509ukih65u2p2qrkma26lp6u79ip.apps.googleusercontent.com">
       {isLoggedIn ? <Home /> : <Login onLoginSuccess={handleLoginSuccess} />}
     </GoogleOAuthProvider>
   );
